@@ -1,8 +1,15 @@
 
 
 
+:root{
+    --primary-color: rgb(37, 37, 37);
+    --secondary-color: rgb(194, 201, 206);
+    --accent-color: rgb(255, 255, 255);
+}
+
+
 body {
-    background-color: rgb(194, 201, 206);
+    background-color:var(--primary-color);
     height: 100%;
     margin: 0;
 }
@@ -12,21 +19,42 @@ body {
     width: 100vw;
 }
 
+.panel-left, .panel-right{
+    margin: 0;
+    padding: 0;
+}
+
 .panel-left {
     display: flex;
-flex: 1;
+    flex: 1;
+    justify-content: center;
 
 
-background-image: url("images/24eggs.jpg");
-background-size: cover;
+    background-image: url("images/24eggs.jpg");
+    background-size: cover;
 
-background-position: center;
-background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+.logo-container {
+    
+    margin-top: 100px;
+}
+.logo-container img {
+    height: 180px;
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px;
+    background: (255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+     border-radius: 10px; 
+
+}
+
 .panel-right {
     display: flex;
     flex: 1;
-    background-color: rgb(37, 37, 37);
+    background-color: var(--secondary-color);
     justify-content: center;
     align-items: center;
     flex-direction: column;
