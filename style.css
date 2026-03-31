@@ -63,10 +63,43 @@ body {
     flex-direction: column;
 }
 
+.panel-right h1, p{
+    align-self: flex-start;
+    margin-left: 10%;
+}
 .panel-right fieldset{
     display: flex;
     flex-wrap:wrap ;
-    justify-content: space-around;
+    justify-content: space-between;
    gap: 20px;
+   width: 80%;
+   border: 2px;
+   margin-top: 25px;
+   border-style: dashed;
+   border-radius: 50px;
+   padding: 25px 25px;
    
+}
+.panel-right fieldset .field{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 48%;
+}
+
+
+.panel-right fieldset input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+}
+.panel-right button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-size: 16px;
+    cursor: pointer;
+    
 }
