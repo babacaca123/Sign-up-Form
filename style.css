@@ -4,7 +4,7 @@
 :root{
     --primary-color: rgb(37, 37, 37);
     --secondary-color: rgb(194, 201, 206);
-    --accent-color: rgb(255, 255, 255);
+    --accent-color: rgb(168, 171, 173);
     --space-sm: 8px;
     --space-md: 16px;
     --space-lg: 32px;
@@ -83,6 +83,7 @@ body {
    border-style: dashed;
    border-radius: var(--space-lg);
    padding: var(--space-lg) var(--space-lg);
+   background-color: var(--accent-color);
    
 }
 .panel-right fieldset .field{
@@ -97,7 +98,25 @@ body {
     padding: var(--space-sm);
     border-radius: 5px;
     border: 1px solid var(--primary-color);
+    transition: all 0.6s ease;
 }
+
+input:focus{
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 5px rgba(79, 70, 229, 0.8);
+}
+
+input:invalid{
+    border-color: rgb(128, 4, 4);
+}
+input:valid{
+    border-color: #16a34a;
+}
+input::placeholder-shown{
+    border-color: #ccc;
+}
+
 .panel-right button{
     padding: var(--space-sm) var(--space-md);
     border-radius: 5px;
@@ -107,6 +126,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: 150ms ease;
+    color: white;
     
 }
 button:hover{
